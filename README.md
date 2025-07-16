@@ -32,3 +32,8 @@ python test.py --dataset regdb
 
 ### LLCM
 python test.py --dataset llcm
+
+## Acknowledgment
+Our implementation primarily builds upon the following code repositories. We sincerely appreciate the original authors for their excellent contributions.
+
+[DEEN](https://github.com/ZYK100/LLCM).[DSNet](https://github.com/takaniwa/DSNet).[HiFuse](https://github.com/huoxiangzuo/HiFuse).[WTConv](https://github.com/BGU-CS-VIL/WTConv).
