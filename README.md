@@ -19,7 +19,7 @@ scikit-learn, yacs==0.1.8, faiss-gpu, opencv-python, numpy==1.24, pillow==9.5.0,
 python train.py --dataset sysu
 
 ### RegDB
-sh train_regdb.py
+sh train_regdb.bash
 
 ### LLCM
 python train,py --dataset llcm
