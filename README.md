@@ -7,6 +7,8 @@ A  project for visible-infrared person re-identification, featuring a context-aw
 3. We propose the Channel-Spatial-Cross Attention-Guided Cross-Modality Alignment (CSC-CMA) module.It enhances discriminative features and fully separates modal features via channel and spatial attention, then achieves precise cross-modal alignment through cross-attention and adaptive feature interaction.
 
 ## Results
+
+\usepackage{booktabs} % 引入三线表宏包
 \begin{table*}[htbp]
 \centering
 \caption{Comparison of the CMFN Method with State-of-the-Art Methods on the SYSU-MM01 Dataset.}
