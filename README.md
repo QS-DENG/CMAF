@@ -15,22 +15,22 @@ conda activate CMFN
 pip install torch==1.12.0+cu116 torchvision==0.13.0+cu116 torchaudio==0.12.0 --extra-index-url https://download.pytorch.org/whl/cu116  
 scikit-learn, yacs==0.1.8, faiss-gpu, opencv-python, numpy==1.24, pillow==9.5.0, timm, dcn, tensorboardX, triton, pywavelets.
 ## Training
-### SYSU-MM01
+#for SYSU-MM01
 python train.py --dataset sysu
 
-### RegDB
+#for RegDB
 sh train_regdb.bash
 
-### LLCM
+#for LLCM
 python train,py --dataset llcm
 ## Evaluation
-### SYSU-MM01
+#for SYSU-MM01
 python test.py --dataset sysu
 
-### RegDB
+#for RegDB
 python test.py --dataset regdb
 
-### LLCM
+#for LLCM
 python test.py --dataset llcm
 
 ## Acknowledgment
