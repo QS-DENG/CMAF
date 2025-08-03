@@ -8,17 +8,17 @@ algc = True
 class DUC(nn.Module):
     def __init__(self, inplanes, planes, upscale_factor=2):
         super(DUC, self).__init__()
-        self.relu = nn.ReLU()  # 激活函数
-        self.conv = nn.Conv2d(inplanes, planes * upscale_factor ** 2, kernel_size=3, padding=1)  # 卷积层
-        self.bn = nn.BatchNorm2d(planes * upscale_factor ** 2)  # 批量归一化
-        self.pixel_shuffle = nn.PixelShuffle(upscale_factor)  # 像素洗牌操作用于上采样
+        self.relu = nn.ReLU()  # Activation function
+        self.conv = nn.Conv2d(inplanes, planes * upscale_factor ** 2, kernel_size=3, padding=1)  # Convolutional layer
+        self.bn = nn.BatchNorm2d(planes * upscale_factor ** 2)  # Batch Normalization
+        self.pixel_shuffle = nn.PixelShuffle(upscale_factor)  # Pixel shuffling operation is used for upsampling
         self.conv2 = nn.Conv2d(planes, planes, kernel_size=1, padding=0, bias=False)
     def forward(self, x):
         x = self.relu(x)
         x = self.conv(x)
         x = self.bn(x)
         x = self.relu(x)
-        x = self.pixel_shuffle(x)  # 通过PixelShuffle进行上采样
+        x = self.pixel_shuffle(x)  # Upsampling via PixelShuffle
         x = self.conv2(x)
         return x
 
@@ -47,7 +47,8 @@ class Conv1X1(nn.Module):
         out = self.relu(self.bn(self.conv(x)))
         return out
 
-# 一个快速聚拢感受野的方法，改编自STDC
+
+# A method for quickly aggregating receptive fields, adapted from STDC
 class HCE(nn.Module):
     def __init__(self, in_planes, inter_planes, out_planes, block_num=3, stride=1, dilation=[2,2,2]):
         super(HCE, self).__init__()
