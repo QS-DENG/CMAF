@@ -25,7 +25,7 @@ sh train_regdb.bash
 
 #for LLCM
 
-python train,py --dataset llcm
+python train.py --dataset llcm
 ## Evaluation
 #for SYSU-MM01
 
