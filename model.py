@@ -1043,9 +1043,9 @@ class MFA_block(nn.Module):
 
 
 
-class CMFN(nn.Module):
+class CMAF(nn.Module):
     def __init__(self, class_num, dataset, arch='resnet50', planes=64):
-        super(CMFN, self).__init__()
+        super(CMAF, self).__init__()
 
         self.thermal_module = thermal_module(arch=arch)
         self.visible_module = visible_module(arch=arch)
