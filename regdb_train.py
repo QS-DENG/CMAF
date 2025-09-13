@@ -14,7 +14,7 @@ import torchvision.transforms as transforms
 from data_loader import SYSUData, RegDBData, LLCMData, TestData
 from data_manager import *
 from eval_metrics import eval_sysu, eval_regdb, eval_llcm
-from model import CMFN
+from model import CMAF
 from utils import *
 from loss import OriTripletLoss, CPMLoss, DCL
 from tensorboardX import SummaryWriter
@@ -199,7 +199,7 @@ print('  ------------------------------')
 print('Data Loading Time:\t {:.3f}'.format(time.time() - end))
 
 print('==> Building model..')
-net = CMFN(n_class, dataset, arch=args.arch)
+net = CMAF(n_class, dataset, arch=args.arch)
 net.to(device)
 cudnn.benchmark = True
 
