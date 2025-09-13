@@ -10,8 +10,8 @@ To facilitate researchers in reproducing our work, we provide the code implement
 Put SYSU-MM01, RegDB and LLCM dataset into datasets. Run pre_process_sysu.py to prepare training data for the SYSU-MM01 dataset.
 
 ## Environment
-conda create -n CMFN python==3.10
-conda activate CMFN
+conda create -n CMAF python==3.10
+conda activate CMAF
 pip install torch==1.12.0+cu116 torchvision==0.13.0+cu116 torchaudio==0.12.0 --extra-index-url https://download.pytorch.org/whl/cu116  
 scikit-learn, yacs==0.1.8, faiss-gpu, opencv-python, numpy==1.24, pillow==9.5.0, timm, dcn, tensorboardX, triton, pywavelets.
 ## Training
