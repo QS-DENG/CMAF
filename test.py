@@ -9,7 +9,7 @@ import torchvision.transforms as transforms
 from data_loader import SYSUData, RegDBData, LLCMData, TestData
 from data_manager import *
 from eval_metrics import eval_sysu, eval_regdb, eval_llcm
-from model import CMFN
+from model import CMAF
 from utils import *
 import pdb
 import scipy.io
@@ -64,7 +64,7 @@ device = 'cuda' if torch.cuda.is_available() else 'cpu'
 best_acc = 0  # best test accuracy
 start_epoch = 0 
 print('==> Building model..')
-net = CMFN(n_class, dataset, arch=args.arch)
+net = CMAF(n_class, dataset, arch=args.arch)
 #net = nn.DataParallel(net)
 net.to(device)    
 cudnn.benchmark = True
